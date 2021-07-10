@@ -14,8 +14,8 @@ async function action() {
 
   let insoDirectory = tc.find("insomnia-inso", semverVersion);
   console.log(`insoDirectory: ${insoDirectory}`)
-  if (!insoDirectory) { 
-    const versionUrl = `https://github.com/ikeike443/inso-pkg/releases/download/${semverVersion}/insomnia-inso-${semverVersion}.tar.gz`;
+  if (!insoDirectory) {
+    const versionUrl = `https://github.com/doctorwu/inso-pkg/releases/download/${semverVersion}/insomnia-inso-${semverVersion}.tar.gz`;
     const insoPath = await tc.downloadTool(versionUrl);
     console.log(`insoPath: ${insoPath}`)
     const insoExtractedFolder = await tc.extractTar(
@@ -28,7 +28,7 @@ async function action() {
     console.log(`insoDirectory: ${insoDirectory}`)
   }
   console.log(`insoDirectory: ${insoDirectory}`)
-  
+
   core.addPath(insoDirectory);
 }
 
